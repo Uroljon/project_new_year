@@ -1,0 +1,397 @@
+*{
+padding: 0;
+margin: 0;
+}
+body{
+/* background-color: rgba(0, 0, 0, 0.788); */
+/* background-color: rgb(141, 141, 185); */
+background-color: #5DA1DE;
+/* background: url(https://thumbs.dreamstime.com/z/snow-covered-tree-branches-clear-blue-sky-background-looking-up-onto-barnches-against-107151000.jpg) no-repeat center center /cover; */
+text-align: center; 
+overflow: hidden;
+}
+
+/* ===============================MAIN============================ */
+main h2{
+    position: absolute;
+    /* left: 25%; */
+    width: 100%;
+    text-align: center;
+    color: rgb(46, 46, 46); 
+    margin-top: 250px;
+    animation: headingAnimation 10s linear 1;
+}
+@keyframes headingAnimation{
+    0%{
+        color: rgb(0, 0, 0); transform: scale(1);
+    }
+    40%{
+        color: rgb(224, 223, 223);
+    }
+    100%{
+        color: rgb(255, 255, 255); transform: scale(4);
+    }
+}
+main h2 span{
+    margin-top: 1em;
+    display: block;
+}
+
+.fa-snowflake-o{/* this is a style of each snowflake */
+color: white;
+position: relative;
+/* margin-top: 40px;     */
+}
+/* ==================up================== */
+.toUpContainer{
+width: 100%;
+height: 23vh;
+/* border: 1px solid green; */
+/* position: absolute; */
+
+}
+.snowToUp{
+animation-name: snowingUpAnimation;
+animation-duration: 3s;   
+
+animation-timing-function: cubic-bezier(.21,.19,1,-0.04);
+
+animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+opacity: 0;  
+/* margin-top: 90px; */
+}
+@keyframes snowingUpAnimation  {/* animation for snowToLeft */
+0%{
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);  
+opacity: 1;
+
+}    
+/* 70%{
+transform: scale(1);
+} */
+99.9%{opacity: 0.5;}
+
+100%{     
+opacity: 0;  
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(-50px) translateX(0px);      
+}
+}
+
+/* ========middle left========================= */
+.toLeft_Middle_Container{
+position: absolute;
+left: 0;
+top: 21vh;
+width: 51%;
+height: 30vh;
+/* border: 1px solid rgb(3, 25, 34); */
+
+}
+.snowToMiddleL{
+animation-name: middleLeftAnimation;
+animation-duration: 3s;   
+
+animation-timing-function: cubic-bezier(.21,.19,1,-0.04);
+
+animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+opacity: 0;  
+/* margin-top: 90px; */
+}
+@keyframes middleLeftAnimation  {/* animation for snowToLeft */
+0%{
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);  
+opacity: 1;
+
+}    
+
+99.9%{opacity: 0.5;}
+
+100%{     
+opacity: 0;  
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(0px) translateX(-100px);      
+}
+}
+/* ====================middle right=========== */
+.toRight_Middle_Container{
+position: absolute;
+right: 0;
+top: 21vh;
+width: 51%;
+height: 30vh;
+/* border: 1px solid rgb(255, 0, 221); */
+
+}
+.snowToMiddleR{
+animation-name: middleRightAnimation;
+animation-duration: 3s;   
+
+animation-timing-function: cubic-bezier(.21,.19,1,-0.04);
+
+animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+opacity: 0;  
+/* margin-top: 90px; */
+}
+@keyframes middleRightAnimation  {/* animation for snowToLeft */
+0%{
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);  
+opacity: 1;
+
+}    
+
+99.9%{opacity: 0.5;}
+
+100%{     
+opacity: 0;  
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(0px) translateX(100px);      
+}
+}
+/* ===============bootom right=============== */
+.toRightContainer{/* just left side container. the snow inside this flows towards right side */
+position: absolute;
+width: 51%; 
+height: 52vh;
+right: 0;
+bottom: 0;
+/* border: 1px solid black; */
+}
+.snowToRight{/* this is for snowlakes falling toward right side */
+animation-name: snowingRightAnimation;
+animation-duration: 3s;
+/* animation-delay: 2s; kerak emas. JS da berildi !*/
+/* animation-timing-function: ease-in; */
+animation-timing-function: cubic-bezier(.21,.19,1,-0.04);
+animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+opacity: 0;
+}
+@keyframes snowingRightAnimation  {/* animation for snowToRight */
+0%{
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);  
+opacity: 1;
+
+}    
+
+99.9%{opacity: 0.5;}
+
+100%{     
+opacity: 0;  
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(100px) translateX(100px);     
+}
+}
+/* ===============bottom left================= */
+.toLeftContainer{
+position: absolute;
+left: 0;
+bottom: 0;
+width: 51%; 
+height: 52vh;
+/* border: 1px solid red; */
+}
+.snowToLeft{/* this is for snowlakes falling toward left side */
+animation-name: snowingLeftAnimation;
+animation-duration: 3s;   
+/* animation-timing-function: cubic-bezier(0.155, 0.05, 0.855, 0.06); */
+/* animation-timing-function: ease-in; */
+animation-timing-function: cubic-bezier(.21,.19,1,-0.04);
+animation-iteration-count: infinite;
+animation-fill-mode: forwards;
+opacity: 0;  
+}
+@keyframes snowingLeftAnimation  {/* animation for snowToLeft */
+0%{
+transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(0) translateY(0px);  
+opacity: 1;
+
+}    
+
+99.9%{opacity: 0.5;}
+
+100%{     
+  opacity: 0;  
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(4) translateY(180px) translateX(-100px);     
+}
+}
+/* ===============snow on face (center)=========== */
+.toFaceContainer{
+position: absolute;
+left: 45%;
+top: 20vh;
+width: 10%; 
+height: 10%;
+border-radius: 10px;
+/* border: 1px solid red; */
+}
+.snowtoFace{/* this is for snowlakes falling to face */
+animation-name: snowOnFaceAnimation;
+animation-duration: 4s;   
+animation-delay: 4s;
+animation-timing-function: ease-in;
+animation-iteration-count: 1;
+animation-fill-mode: forwards;
+opacity: 0;  
+}
+@keyframes snowOnFaceAnimation  {/* animation for snowToLeft */
+0%{
+transform: scale(0); 
+opacity: 1;
+}  
+50%{ opacity: 1;
+transform: scale(4) rotateX(200deg) rotateY(360deg);
+}  
+75%{ 
+transform: scale(4) rotateX(200deg) rotateY(360deg); 
+}  
+80%{  transform: scale(4) rotateX(200deg) rotateY(360deg);          
+}  
+90%{  transform: scale(4) rotateX(200deg) rotateY(360deg);          
+}  
+99%{ opacity: 0; transform: scale(4) rotateX(200deg) rotateY(360deg);          
+}  
+100%{
+transform: scale(4) rotateX(200deg) rotatY(360deg);
+opacity: 0;
+}
+}
+
+/* ===============Button to initiate snowfall=========== */
+#button{/* this is a stop button */
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;    
+    }
+#button:hover{
+    animation: twinkleAnimation 500ms linear 1;
+}
+@keyframes twinkleAnimation{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(-20deg);}
+    50%{transform: rotate(20deg);}
+    75%{transform: rotate(-20deg);}
+    100%{transform: rotate(0deg);}
+}
+
+/* ==============================section========================== */
+
+#section{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background: url(img/back.jpg) no-repeat center center /cover;
+}
+#overlay{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.774);
+}
+#container{
+    position: relative;
+    top: 55vh;
+    left: -20vw;
+    display: inline-block;    
+}
+.tree{
+    animation: archa 20s linear infinite forwards;
+    /* animation-play-state: paused; */
+    position: absolute;
+    left: 0;
+    color: transparent;
+}
+@keyframes archa {
+    0%{
+        transform: translate(0%, 0%);
+        color: rgb(231, 231, 231);
+    }
+
+    10%{
+        transform: translate(40vw, -5vh) ;
+        color: rgb(0, 204, 255);
+    }
+    20%{
+        transform: translate(5vw, -10vh) ;
+        color: blue;
+    }
+    
+    30%{
+        transform: translate(35vw, -15vh) ;
+        color: rgb(255, 255, 255);
+    }
+    40%{
+        transform: translate(10vw, -20vh) ;
+        color: rgb(0, 225, 255);
+    }
+    50%{
+        transform: translate(30vw, -25vh) ;
+        color: rgb(0, 47, 255);
+    }
+    60%{
+        transform: translate(15vw, -30vh) ;
+        color: white;
+    }
+    70%{
+        transform: translate(25vw, -35vh) ;
+        color: rgb(43, 205, 226);
+    }
+    80%{
+        transform: translate(18vw, -37vh) ;
+        color: rgb(226, 223, 43);
+    }
+    85%{
+        transform: translate(21.5vw, -40vh) ;
+        /* color: white; */
+    }
+    90%{
+        transform: translate(21.5vw, -45vh) scale(0);
+        color: white;
+        opacity: 1;
+    }
+    91%{
+        transform: translate(21.5vw, -45vh) scale(3);
+        opacity: 1;
+    }
+ 
+    96%{
+        transform: translate(21.5vw, -45vh) scale(4);
+    }
+    100%{
+        transform: translate(21.5vw, -45vh) ;
+        color: transparent;
+        opacity: 0;
+    }
+
+
+}
+
+#example{
+    animation: justRotate 2s linear forwards infinite;  
+    /* z-index: 200000;   */
+}
+@keyframes justRotate{
+    0%{transform: rotate(0deg) scale(2);color: blue;}
+    100%{transform: rotate(-400deg) scale(2);color: white;}
+}
+
+@media(max-width: 768px){
+ 
+    @keyframes headingAnimation{
+        0%{
+            color: rgb(0, 0, 0); transform: scale(1);
+        }
+        40%{
+            color: rgb(224, 223, 223);
+        }
+        100%{
+            color: rgb(255, 255, 255); transform: scale(2);
+        }
+    }
+
+    i{
+        font-size: 0.5em;/* telefonda qor kichikroq */
+    }
+}
